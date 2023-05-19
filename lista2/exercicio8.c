@@ -5,8 +5,12 @@ int main() {
 
 	while (entrada != 0) {
 
-		printf("Informe sua intencao de voto:\n");
-		scanf("%d", &entrada);
+		do {		
+			printf("Informe sua intencao de voto:\n");
+			scanf("%d", &entrada);
+			if (entrada < 0 )
+				printf("Entrada invalida, digite 0 para parar.\n");
+		} while (entrada < 0);
 
 		switch(entrada) {
 			case 1: 
